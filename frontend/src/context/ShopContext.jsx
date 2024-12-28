@@ -45,7 +45,6 @@ const ShopContextProvider = (props) => {
           { itemId, size },
           { headers: { token } }
         );
-        toast.success("Cart updated successfully!");
       } catch (error) {
         console.error(error);
         toast.error(
@@ -107,7 +106,7 @@ const ShopContextProvider = (props) => {
     try {
       // Ensure the URL is correct (including trailing slash)
       const url = `${backendUrl}/api/product/list`;
-      console.log("Fetching products from:", url); // Debugging
+
       const response = await axios.get(url);
 
       // Ensure the response structure matches what you're expecting
